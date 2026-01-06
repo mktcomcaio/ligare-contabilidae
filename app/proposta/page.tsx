@@ -269,7 +269,7 @@ export default function PropostaPage() {
           </h2>
           <div className={styles.formGrid}>
             <div className={styles.formGroup}>
-              <label htmlFor="nomeCliente">Nome do Cliente</label>
+              <label htmlFor="nomeCliente">Nome do Cliente <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="nomeCliente"
@@ -277,10 +277,11 @@ export default function PropostaPage() {
                 value={formData.nomeCliente}
                 onChange={handleChange}
                 placeholder="Nome da empresa ou pessoa"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="cnpjCliente">CNPJ</label>
+              <label htmlFor="cnpjCliente">CNPJ <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="cnpjCliente"
@@ -288,10 +289,11 @@ export default function PropostaPage() {
                 value={formData.cnpjCliente}
                 onChange={handleChange}
                 placeholder="00.000.000/0001-00"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="referenciaServico">Referência do Serviço</label>
+              <label htmlFor="referenciaServico">Referência do Serviço <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="referenciaServico"
@@ -299,6 +301,7 @@ export default function PropostaPage() {
                 value={formData.referenciaServico}
                 onChange={handleChange}
                 placeholder="Ex: Abertura de Empresa"
+                required
               />
             </div>
           </div>
@@ -312,7 +315,7 @@ export default function PropostaPage() {
           </h2>
           <div className={styles.formGrid}>
             <div className={styles.formGroup}>
-              <label htmlFor="prazoConclusao">Prazo de Conclusão (dias úteis)</label>
+              <label htmlFor="prazoConclusao">Prazo de Conclusão (dias úteis) <span className={styles.required}>*</span></label>
               <input
                 type="number"
                 id="prazoConclusao"
@@ -320,10 +323,11 @@ export default function PropostaPage() {
                 value={formData.prazoConclusao}
                 onChange={handleChange}
                 min="1"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="quantidade">Quantidade</label>
+              <label htmlFor="quantidade">Quantidade <span className={styles.required}>*</span></label>
               <input
                 type="number"
                 id="quantidade"
@@ -331,10 +335,11 @@ export default function PropostaPage() {
                 value={formData.quantidade}
                 onChange={handleChange}
                 min="1"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="valorUnitario">Valor Unitário (R$)</label>
+              <label htmlFor="valorUnitario">Valor Unitário (R$) <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="valorUnitario"
@@ -342,15 +347,17 @@ export default function PropostaPage() {
                 value={formData.valorUnitario}
                 onChange={handleChange}
                 placeholder="0,00"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="numeroParcelas">Número de Parcelas</label>
+              <label htmlFor="numeroParcelas">Número de Parcelas <span className={styles.required}>*</span></label>
               <select
                 id="numeroParcelas"
                 name="numeroParcelas"
                 value={formData.numeroParcelas}
                 onChange={handleChange}
+                required
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
                   <option key={num} value={num.toString()}>
@@ -360,18 +367,19 @@ export default function PropostaPage() {
               </select>
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="vencimentoPrimeiraParcela">Vencimento 1ª Parcela</label>
+              <label htmlFor="vencimentoPrimeiraParcela">Vencimento 1ª Parcela <span className={styles.required}>*</span></label>
               <input
                 type="date"
                 id="vencimentoPrimeiraParcela"
                 name="vencimentoPrimeiraParcela"
                 value={formData.vencimentoPrimeiraParcela}
                 onChange={handleChange}
+                required
               />
             </div>
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="descricaoServico">Descrição do Serviço</label>
+            <label htmlFor="descricaoServico">Descrição do Serviço <span className={styles.required}>*</span></label>
             <input
               type="text"
               id="descricaoServico"
@@ -379,6 +387,7 @@ export default function PropostaPage() {
               value={formData.descricaoServico}
               onChange={handleChange}
               placeholder="Ex: Abertura de Empresa + Taxa da OAB"
+              required
             />
           </div>
         </div>
@@ -391,7 +400,7 @@ export default function PropostaPage() {
           </h2>
           <div className={styles.formGrid}>
             <div className={styles.formGroup}>
-              <label htmlFor="validadeProposta">Validade da Proposta (dias)</label>
+              <label htmlFor="validadeProposta">Validade da Proposta (dias) <span className={styles.required}>*</span></label>
               <input
                 type="number"
                 id="validadeProposta"
@@ -399,10 +408,11 @@ export default function PropostaPage() {
                 value={formData.validadeProposta}
                 onChange={handleChange}
                 min="1"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="honorariosMensais">Honorários Mensais (R$)</label>
+              <label htmlFor="honorariosMensais">Honorários Mensais (R$) <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="honorariosMensais"
@@ -410,6 +420,7 @@ export default function PropostaPage() {
                 value={formData.honorariosMensais}
                 onChange={handleChange}
                 placeholder="0,00"
+                required
               />
             </div>
             <div className={styles.formGroup}>
@@ -425,7 +436,7 @@ export default function PropostaPage() {
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="regimeTributario">Regime Tributário</label>
+              <label htmlFor="regimeTributario">Regime Tributário <span className={styles.required}>*</span></label>
               <input
                 type="text"
                 id="regimeTributario"
@@ -433,10 +444,11 @@ export default function PropostaPage() {
                 value={formData.regimeTributario}
                 onChange={handleChange}
                 placeholder="Ex: Simples Nacional"
+                required
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="diaVencimentoMensal">Dia de Vencimento Mensal</label>
+              <label htmlFor="diaVencimentoMensal">Dia de Vencimento Mensal <span className={styles.required}>*</span></label>
               <input
                 type="number"
                 id="diaVencimentoMensal"
@@ -445,6 +457,7 @@ export default function PropostaPage() {
                 onChange={handleChange}
                 min="1"
                 max="31"
+                required
               />
             </div>
           </div>
@@ -457,7 +470,7 @@ export default function PropostaPage() {
             Conteúdo da Proposta
           </h2>
           <div className={styles.formGroup}>
-            <label htmlFor="objetivoPrincipal">Objetivo Principal</label>
+            <label htmlFor="objetivoPrincipal">Objetivo Principal <span className={styles.required}>*</span></label>
             <textarea
               id="objetivoPrincipal"
               name="objetivoPrincipal"
@@ -465,10 +478,11 @@ export default function PropostaPage() {
               onChange={handleChange}
               rows={3}
               placeholder="Ex: Prestar o serviço de assessoria contábil na área de LEGALIZAÇÃO, realizando especialmente a Transformação de MEI para LTDA com a regularização do CNPJ."
+              required
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="definicaoServicos">Definição dos Serviços a serem Executados</label>
+            <label htmlFor="definicaoServicos">Definição dos Serviços a serem Executados <span className={styles.required}>*</span></label>
             <textarea
               id="definicaoServicos"
               name="definicaoServicos"
@@ -476,10 +490,11 @@ export default function PropostaPage() {
               onChange={handleChange}
               rows={4}
               placeholder="Ex: Entrar com o processo de ARQUIVAMENTO DE TRANSFORMAÇÃO DE EMPRESA, realizando seu devido acompanhamento junto a Junta Comercial do Estado de São Paulo..."
+              required
             />
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="exclusoes">Exclusões (O que não está incluído)</label>
+            <label htmlFor="exclusoes">Exclusões (O que não está incluído) <span className={styles.required}>*</span></label>
             <textarea
               id="exclusoes"
               name="exclusoes"
@@ -487,6 +502,7 @@ export default function PropostaPage() {
               onChange={handleChange}
               rows={3}
               placeholder="Ex: Não compreende essa proposta, a emissão de licenças sanitária, bombeiros, ambiental..."
+              required
             />
           </div>
         </div>

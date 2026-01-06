@@ -121,6 +121,12 @@
   font-size: 0.95rem;
 }
 
+.required {
+  color: #e74c3c;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
 .formGroup input,
 .formGroup textarea,
 .formGroup select {
